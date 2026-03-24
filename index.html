@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=lang-buttons">
+  <link rel="stylesheet" href="./styles.css?v=lang-strip">
 </head>
 <body>
   <header class="site-header">
@@ -24,6 +24,17 @@
       </div>
     </div>
   </header>
+
+  <div class="lang-banner" role="region" aria-label="Language selection">
+    <div class="container lang-banner-inner">
+      <span class="lang-banner-label" data-i18n="lang.bannerLabel">Мова / Language / Sprache</span>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en" title="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="uk" title="Українська">UA</button>
+        <button type="button" class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="hero">
@@ -209,7 +220,7 @@
     </div>
   </footer>
 
-  <script src="./config.js?v=lang-buttons"></script>
-  <script src="./script.js?v=lang-buttons"></script>
+  <script src="./config.js?v=lang-strip"></script>
+  <script src="./script.js?v=lang-strip"></script>
 </body>
 </html>
