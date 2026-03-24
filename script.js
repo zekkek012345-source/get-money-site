@@ -28,12 +28,14 @@ const translations = {
   en: {},
   uk: {
     "lang.bannerLabel": "Мова / Language / Sprache",
+    "nav.bookCall": "Дзвінок 15 хв",
     "nav.cta": "Отримати безкоштовний аудит",
     "hero.eyebrow": "Для локального сервісного бізнесу",
     "hero.title": "Перестаньте втрачати дорогі ліди, поки команда зайнята.",
     "hero.copy": "Ми створюємо AI-систему, що відповідає менш ніж за 2 хвилини, повертає пропущені дзвінки та бронює більше заявок на автопілоті.",
     "hero.ctaPrimary": "Замовити безкоштовний аудит",
     "hero.ctaSecondary": "Як це працює",
+    "hero.bookCall": "Запис на 15 хв",
     "hero.trust1": "Без довгострокових контрактів",
     "hero.trust2": "Запуск за 5-7 днів",
     "hero.trust3": "Щотижнева звітність",
@@ -101,12 +103,14 @@ const translations = {
   },
   de: {
     "lang.bannerLabel": "Sprache / Language / Мова",
+    "nav.bookCall": "15-Min. Call",
     "nav.cta": "Kostenloses Audit erhalten",
     "hero.eyebrow": "Fur lokale Dienstleistungsunternehmen",
     "hero.title": "Verlieren Sie keine hochwertigen Leads mehr, wahrend Ihr Team beschaftigt ist.",
     "hero.copy": "Wir bauen ein KI-Follow-up-System, das in unter 2 Minuten antwortet, verpasste Anrufe reaktiviert und mehr Auftrage automatisch bucht.",
     "hero.ctaPrimary": "Mein kostenloses Audit buchen",
     "hero.ctaSecondary": "So funktioniert es",
+    "hero.bookCall": "15-Min. Termin buchen",
     "hero.trust1": "Keine Langzeitvertrage",
     "hero.trust2": "Start in 5-7 Tagen",
     "hero.trust3": "Wochentliche Performance-Berichte",
@@ -255,6 +259,9 @@ if (form && formMessage) {
       leadScore: getLeadScore(leadVolume),
       source: "landing_page",
       submittedAt: new Date().toISOString(),
+      language: currentLanguage,
+      pageUrl: typeof location !== "undefined" ? location.href.split("#")[0] : "",
+      referrer: typeof document !== "undefined" ? document.referrer || "" : "",
     };
 
     localStorage.setItem("leadpulse_latest_lead", JSON.stringify(payload));
@@ -286,4 +293,20 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang") || "en"));
 });
 
+function initBookCallLinks() {
+  const url = (window.CALENDLY_URL || "").trim();
+  document.querySelectorAll("[data-book-link]").forEach((el) => {
+    if (url.startsWith("http")) {
+      el.href = url;
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    } else {
+      el.href = "#contact";
+      el.removeAttribute("target");
+      el.removeAttribute("rel");
+    }
+  });
+}
+
 applyLanguage(currentLanguage);
+initBookCallLinks();
