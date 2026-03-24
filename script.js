@@ -55,15 +55,12 @@ if (form && formMessage) {
     }
 
     try {
-      const response = await fetch(endpoint, {
+      await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
         body: JSON.stringify(payload),
       });
-
-      if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
-      }
 
       showMessage("Thanks. Audit request received. We will contact you shortly.");
       form.reset();
