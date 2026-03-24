@@ -1,3 +1,6 @@
+// Публічна адреса сайту (для шарингу, SEO, UTM)
+window.LEADPULSE_SITE_URL = "https://zekkek012345-source.github.io/get-money-site/";
+
 // Web App URL (Apps Script deploy)
 window.LEADPULSE_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbzHqa8dmRrBApwoB-RK-_inOJV8_hjLpofkxuterWhcnoclrtcOd4rOZfxc0TX6Fpz7/exec";
