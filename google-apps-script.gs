@@ -1,5 +1,11 @@
 const SHEET_NAME = "Leads";
 
+function doGet() {
+  return ContentService
+    .createTextOutput(JSON.stringify({ ok: true, service: "lead-capture" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 function doPost(e) {
   try {
     const payload = JSON.parse(e.postData.contents || "{}");
