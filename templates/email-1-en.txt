@@ -1,0 +1,12 @@
+Subject: Quick question about missed calls at {{COMPANY}}
+
+Hi {{NAME}},
+
+I help {{NICHE}} teams recover leads that slip through when everyone’s on a job.
+
+Worth a 15-min look? I’ll show where leads typically leak and what we automate first.
+
+{{BOOK_LINK}}
+
+Best,
+{{YOUR_NAME}}
