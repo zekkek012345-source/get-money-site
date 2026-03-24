@@ -294,12 +294,20 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
 });
 
 function initBookCallLinks() {
-  const url = (window.CALENDLY_URL || "").trim();
+  const url = (
+    window.BOOKING_URL ||
+    window.CALENDLY_URL ||
+    ""
+  ).trim();
   document.querySelectorAll("[data-book-link]").forEach((el) => {
     if (url.startsWith("http")) {
       el.href = url;
       el.target = "_blank";
       el.rel = "noopener noreferrer";
+    } else if (url.startsWith("mailto:")) {
+      el.href = url;
+      el.removeAttribute("target");
+      el.removeAttribute("rel");
     } else {
       el.href = "#contact";
       el.removeAttribute("target");
