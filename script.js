@@ -316,5 +316,44 @@ function initBookCallLinks() {
   });
 }
 
+function getPublicSiteUrl() {
+  const configured = (window.LEADPULSE_SITE_URL || "").trim();
+  if (configured) return configured.replace(/\/?$/, "/");
+  const path = window.location.pathname.replace(/index\.html$/i, "");
+  return (window.location.origin + (path.endsWith("/") ? path : path + "/")).replace(/\/?$/, "/");
+}
+
+function initReachShare() {
+  const base = getPublicSiteUrl();
+  const encoded = encodeURIComponent(base);
+  const li = document.getElementById("share-linkedin");
+  const x = document.getElementById("share-x");
+  const btn = document.getElementById("btn-copy-site-link");
+  const toast = document.getElementById("copy-toast");
+  if (li) {
+    li.href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encoded;
+  }
+  if (x) {
+    const tweet = encodeURIComponent(
+      "AI follow-up in under 2 min for local service businesses — free audit:"
+    );
+    x.href = "https://twitter.com/intent/tweet?text=" + tweet + "&url=" + encoded;
+  }
+  if (btn && toast) {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(base);
+        toast.textContent = "Link copied — paste it anywhere.";
+        setTimeout(() => {
+          toast.textContent = "";
+        }, 2800);
+      } catch {
+        toast.textContent = base;
+      }
+    });
+  }
+}
+
 applyLanguage(currentLanguage);
 initBookCallLinks();
+initReachShare();
