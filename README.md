@@ -68,6 +68,12 @@ Current score (auto):
 
 Use this to prioritize outreach to hottest leads first.
 
+## Reach / growth (free)
+
+- `growth.html` — готові пости (LinkedIn, X, Reddit), UTM, підпис email, чекліст.
+- `robots.txt`, `sitemap.xml` — додайте sitemap у [Google Search Console](https://search.google.com/search-console) та [Bing Webmaster](https://www.bing.com/webmasters).
+- На головній: блок **Grow reach** + кнопки «Copy site link», LinkedIn, X.
+
 ## Recommended Next Integrations
 
 - CRM (HubSpot, Pipedrive, Airtable)
