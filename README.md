@@ -6,7 +6,10 @@ High-converting MVP landing page for selling an AI lead recovery service to loca
 
 - `index.html` - landing page structure and sales copy
 - `styles.css` - visual design and responsive layout
-- `script.js` - simple lead form behavior (local demo storage)
+- `script.js` - form, i18n, lead payload
+- `config.js` - endpoint + optional `CALENDLY_URL`
+- `google-apps-script.gs` - Sheet + optional email alerts
+- `OPERATIONS.txt` - щоденний плейбук і шаблони листів
 
 ## Local Preview
 
@@ -36,12 +39,17 @@ Open `index.html` in a browser.
    - Who has access: `Anyone`
 5. Copy the Web App URL.
 
+**Email на кожен лід (опційно):** у Apps Script → Project Settings → Script properties → `ALERT_EMAIL` = ваш email → зберегти → Deploy нову версію Web App.
+
 ### 2) Connect Site Form
 
 1. Open `config.js`.
-2. Set:
-   - `window.LEADPULSE_ENDPOINT = "YOUR_WEB_APP_URL";`
-3. Save and redeploy the site.
+2. Set `window.LEADPULSE_ENDPOINT` (і за бажанням `window.CALENDLY_URL` для кнопок «15-min call»).
+3. Після змін у `google-apps-script.gs` — вставити код у редактор і зробити **Deploy → New version**.
+
+### Sheet columns
+
+Після оновлення скрипта з’являться колонки: `status`, `language`, `page_url`, `referrer` (старі рядки збережуться).
 
 ### 3) Verify
 
