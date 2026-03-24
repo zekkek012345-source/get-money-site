@@ -1,0 +1,1 @@
+Hi {{NAME}}, this is {{YOUR_NAME}} — you asked about lead follow-up on our site. Do you have 15 min tomorrow for a quick call? {{BOOK_LINK}}
