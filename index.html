@@ -14,7 +14,14 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <div class="brand">LeadPulse AI</div>
-      <a class="btn btn-outline" href="#contact">Get Free Audit</a>
+      <div class="nav-controls">
+        <select id="language-select" class="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="uk">Українська</option>
+          <option value="de">Deutsch</option>
+        </select>
+        <a class="btn btn-outline" href="#contact" data-i18n="nav.cta">Get Free Audit</a>
+      </div>
     </div>
   </header>
 
@@ -22,28 +29,28 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">For Local Service Businesses</p>
-          <h1>Stop losing high-value leads while your team is busy.</h1>
-          <p class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">For Local Service Businesses</p>
+          <h1 data-i18n="hero.title">Stop losing high-value leads while your team is busy.</h1>
+          <p class="hero-copy" data-i18n="hero.copy">
             We build an AI follow-up system that replies in under 2 minutes, re-engages missed calls,
             and books more jobs on autopilot.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Book My Free Audit</a>
-            <a class="btn btn-secondary" href="#how">See How It Works</a>
+            <a class="btn btn-primary" href="#contact" data-i18n="hero.ctaPrimary">Book My Free Audit</a>
+            <a class="btn btn-secondary" href="#how" data-i18n="hero.ctaSecondary">See How It Works</a>
           </div>
           <ul class="trust-points">
-            <li>No long-term contracts</li>
-            <li>Setup in 5-7 days</li>
-            <li>Weekly performance reporting</li>
+            <li data-i18n="hero.trust1">No long-term contracts</li>
+            <li data-i18n="hero.trust2">Setup in 5-7 days</li>
+            <li data-i18n="hero.trust3">Weekly performance reporting</li>
           </ul>
         </div>
         <aside class="hero-card">
-          <h2>Estimated Lift</h2>
-          <div class="metric-row"><span>Missed leads recovered</span><strong>+22-37%</strong></div>
-          <div class="metric-row"><span>Response speed</span><strong>&lt; 2 min</strong></div>
-          <div class="metric-row"><span>Booked jobs</span><strong>+15-28%</strong></div>
-          <p class="small">
+          <h2 data-i18n="hero.cardTitle">Estimated Lift</h2>
+          <div class="metric-row"><span data-i18n="hero.metric1">Missed leads recovered</span><strong>+22-37%</strong></div>
+          <div class="metric-row"><span data-i18n="hero.metric2">Response speed</span><strong>&lt; 2 min</strong></div>
+          <div class="metric-row"><span data-i18n="hero.metric3">Booked jobs</span><strong>+15-28%</strong></div>
+          <p class="small" data-i18n="hero.disclaimer">
             Typical first 30 days after deployment. Results depend on niche and lead volume.
           </p>
         </aside>
@@ -52,19 +59,19 @@
 
     <section class="proof">
       <div class="container">
-        <p class="section-kicker">Why owners choose us</p>
+        <p class="section-kicker" data-i18n="proof.kicker">Why owners choose us</p>
         <div class="proof-grid">
           <article class="card">
-            <h3>Revenue-first automation</h3>
-            <p>Every workflow is tied to booked appointments and recovered opportunities.</p>
+            <h3 data-i18n="proof.card1Title">Revenue-first automation</h3>
+            <p data-i18n="proof.card1Copy">Every workflow is tied to booked appointments and recovered opportunities.</p>
           </article>
           <article class="card">
-            <h3>Built for busy teams</h3>
-            <p>Your staff keeps working as usual while AI handles speed-to-lead and follow-up.</p>
+            <h3 data-i18n="proof.card2Title">Built for busy teams</h3>
+            <p data-i18n="proof.card2Copy">Your staff keeps working as usual while AI handles speed-to-lead and follow-up.</p>
           </article>
           <article class="card">
-            <h3>Transparent weekly reports</h3>
-            <p>You see exactly how many leads were saved, converted, and worth.</p>
+            <h3 data-i18n="proof.card3Title">Transparent weekly reports</h3>
+            <p data-i18n="proof.card3Copy">You see exactly how many leads were saved, converted, and worth.</p>
           </article>
         </div>
       </div>
@@ -72,22 +79,22 @@
 
     <section id="how" class="how">
       <div class="container">
-        <p class="section-kicker">How it works</p>
+        <p class="section-kicker" data-i18n="how.kicker">How it works</p>
         <div class="steps">
           <article class="step">
             <span>01</span>
-            <h3>Audit Your Lead Flow</h3>
-            <p>We map where leads drop off: forms, calls, inbox, and follow-up.</p>
+            <h3 data-i18n="how.step1Title">Audit Your Lead Flow</h3>
+            <p data-i18n="how.step1Copy">We map where leads drop off: forms, calls, inbox, and follow-up.</p>
           </article>
           <article class="step">
             <span>02</span>
-            <h3>Deploy AI Recovery System</h3>
-            <p>We launch instant replies, reminders, reactivation sequences, and pipeline tracking.</p>
+            <h3 data-i18n="how.step2Title">Deploy AI Recovery System</h3>
+            <p data-i18n="how.step2Copy">We launch instant replies, reminders, reactivation sequences, and pipeline tracking.</p>
           </article>
           <article class="step">
             <span>03</span>
-            <h3>Scale What Converts</h3>
-            <p>Each week we optimize scripts and automations to lift conversion rates further.</p>
+            <h3 data-i18n="how.step3Title">Scale What Converts</h3>
+            <p data-i18n="how.step3Copy">Each week we optimize scripts and automations to lift conversion rates further.</p>
           </article>
         </div>
       </div>
@@ -95,35 +102,35 @@
 
     <section class="pricing">
       <div class="container">
-        <p class="section-kicker">Simple pricing</p>
+        <p class="section-kicker" data-i18n="pricing.kicker">Simple pricing</p>
         <div class="pricing-grid">
           <article class="price-card">
-            <h3>Launch</h3>
+            <h3 data-i18n="pricing.launchTitle">Launch</h3>
             <p class="price">$490 setup</p>
             <ul>
-              <li>Lead flow audit</li>
-              <li>AI response scripts</li>
-              <li>CRM integration</li>
+              <li data-i18n="pricing.launch1">Lead flow audit</li>
+              <li data-i18n="pricing.launch2">AI response scripts</li>
+              <li data-i18n="pricing.launch3">CRM integration</li>
             </ul>
           </article>
           <article class="price-card featured">
-            <p class="badge">Most Popular</p>
-            <h3>Growth</h3>
+            <p class="badge" data-i18n="pricing.badge">Most Popular</p>
+            <h3 data-i18n="pricing.growthTitle">Growth</h3>
             <p class="price">$189/mo</p>
             <ul>
-              <li>Everything in Launch</li>
-              <li>Follow-up automations</li>
-              <li>Weekly optimization</li>
-              <li>Owner KPI reports</li>
+              <li data-i18n="pricing.growth1">Everything in Launch</li>
+              <li data-i18n="pricing.growth2">Follow-up automations</li>
+              <li data-i18n="pricing.growth3">Weekly optimization</li>
+              <li data-i18n="pricing.growth4">Owner KPI reports</li>
             </ul>
           </article>
           <article class="price-card">
-            <h3>Scale</h3>
-            <p class="price">Custom</p>
+            <h3 data-i18n="pricing.scaleTitle">Scale</h3>
+            <p class="price" data-i18n="pricing.scalePrice">Custom</p>
             <ul>
-              <li>Multi-location rollout</li>
-              <li>Advanced analytics</li>
-              <li>Priority support</li>
+              <li data-i18n="pricing.scale1">Multi-location rollout</li>
+              <li data-i18n="pricing.scale2">Advanced analytics</li>
+              <li data-i18n="pricing.scale3">Priority support</li>
             </ul>
           </article>
         </div>
@@ -132,19 +139,19 @@
 
     <section class="faq">
       <div class="container">
-        <p class="section-kicker">FAQ</p>
+        <p class="section-kicker" data-i18n="faq.kicker">FAQ</p>
         <div class="faq-list">
           <details>
-            <summary>How fast can we launch?</summary>
-            <p>Typical deployment is 5-7 business days after strategy call and access handoff.</p>
+            <summary data-i18n="faq.q1">How fast can we launch?</summary>
+            <p data-i18n="faq.a1">Typical deployment is 5-7 business days after strategy call and access handoff.</p>
           </details>
           <details>
-            <summary>Do we need new software?</summary>
-            <p>No. We can work with your existing CRM or connect a lightweight stack.</p>
+            <summary data-i18n="faq.q2">Do we need new software?</summary>
+            <p data-i18n="faq.a2">No. We can work with your existing CRM or connect a lightweight stack.</p>
           </details>
           <details>
-            <summary>Can this work for low lead volume?</summary>
-            <p>Yes, but strongest ROI appears when you get at least 100 inbound leads monthly.</p>
+            <summary data-i18n="faq.q3">Can this work for low lead volume?</summary>
+            <p data-i18n="faq.a3">Yes, but strongest ROI appears when you get at least 100 inbound leads monthly.</p>
           </details>
         </div>
       </div>
@@ -153,42 +160,42 @@
     <section id="contact" class="contact">
       <div class="container contact-grid">
         <div>
-          <p class="section-kicker">Free conversion audit</p>
-          <h2>See how many leads you are losing right now.</h2>
-          <p>
+          <p class="section-kicker" data-i18n="contact.kicker">Free conversion audit</p>
+          <h2 data-i18n="contact.title">See how many leads you are losing right now.</h2>
+          <p data-i18n="contact.copy">
             Fill this in and we send your custom opportunity map within 24 hours.
           </p>
         </div>
         <form id="lead-form" class="form-card">
           <label>
-            Name
+            <span data-i18n="form.name">Name</span>
             <input type="text" name="name" required>
           </label>
           <label>
-            Phone / WhatsApp
-            <input type="tel" name="phone" placeholder="+1 555 123 4567">
+            <span data-i18n="form.phone">Phone / WhatsApp</span>
+            <input type="tel" name="phone" placeholder="+1 555 123 4567" data-i18n-placeholder="form.phonePlaceholder">
           </label>
           <label>
-            Business Email
+            <span data-i18n="form.email">Business Email</span>
             <input type="email" name="email" required>
           </label>
           <label>
-            Business Type
-            <input type="text" name="niche" placeholder="HVAC, Plumbing, Dental..." required>
+            <span data-i18n="form.businessType">Business Type</span>
+            <input type="text" name="niche" placeholder="HVAC, Plumbing, Dental..." required data-i18n-placeholder="form.businessTypePlaceholder">
           </label>
           <label>
-            Monthly Lead Volume
+            <span data-i18n="form.leadVolume">Monthly Lead Volume</span>
             <select name="lead_volume" required>
-              <option value="">Choose one</option>
-              <option>0-100</option>
-              <option>100-300</option>
-              <option>300-700</option>
-              <option>700+</option>
+              <option value="" data-i18n="form.chooseOne">Choose one</option>
+              <option value="0-100">0-100</option>
+              <option value="100-300">100-300</option>
+              <option value="300-700">300-700</option>
+              <option value="700+">700+</option>
             </select>
           </label>
           <input type="text" name="company_website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn btn-primary" type="submit">Get My Free Audit</button>
-          <p class="form-note">By submitting, you agree to be contacted about your audit.</p>
+          <button class="btn btn-primary" type="submit" data-i18n="form.submit">Get My Free Audit</button>
+          <p class="form-note" data-i18n="form.note">By submitting, you agree to be contacted about your audit.</p>
           <p id="form-message" class="form-message" aria-live="polite"></p>
         </form>
       </div>
@@ -197,8 +204,8 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© <span id="year"></span> LeadPulse AI. All rights reserved.</p>
-      <a href="#top">Back to top</a>
+      <p data-i18n-html="footer.copyright">© <span id="year"></span> LeadPulse AI. All rights reserved.</p>
+      <a href="#top" data-i18n="footer.backToTop">Back to top</a>
     </div>
   </footer>
 
