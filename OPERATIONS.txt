@@ -1,0 +1,74 @@
+LEADPULSE — швидкий старт до прибутку (сьогодні → завтра)
+============================================================
+
+ЩО ВЖЕ ПРАЦЮЄ
+-------------
+- Сайт збирає ліди у Google Sheet (лист Leads).
+- У колонці lead_score сортуйте за спаданням — спочатку дзвоніть 80+.
+- Колонка status: new → contacted → qualified → won / lost.
+
+НАЛАШТУВАННЯ СПОВІЩЕНЬ (5 хв)
+-----------------------------
+У Apps Script: Project Settings → Script properties → додайте:
+  ALERT_EMAIL = ваш@email.com
+Потім Deploy → керування → нова версія Web App (як раніше).
+На кожну заявку прийде лист.
+
+CALENDLY (5 хв)
+---------------
+1. Зареєструйте безкоштовний https://calendly.com
+2. Створіть тип події 15 хв.
+3. Вставте посилання у файл config.js → CALENDLY_URL на диску D:\Projects\Get Money
+4. Залийте оновлений config.js у репозиторій GitHub (або скажіть — оновлю через API).
+
+ЩОДЕННИЙ РЕЖИМ (25–40 хв)
+--------------------------
+Ранок:
+1) Відкрити Leads, фільтр status = new.
+2) Топ-10 за lead_score — надіслати Email #1 (нижче).
+3) Якщо є телефон — дзвінок або голосове WhatsApp (скрипт нижче).
+
+Вечір:
+4) Оновити status у таблиці.
+5) Follow-up тим, хто не відповів (Email #2).
+
+ШАБЛОНИ (EN — ринок США, локальні сервіси)
+------------------------------------------
+
+--- Email #1 (холодний, короткий) ---
+Subject: Quick question about missed calls at {{COMPANY}}
+
+Hi {{NAME}},
+
+I help {{NICHE}} teams recover leads that slip through when everyone’s on a job.
+
+Worth a 15-min look? I’ll show where leads typically leak and what we automate first.
+
+{{BOOK_LINK}}
+
+Best,
+{{YOUR_NAME}}
+
+--- Email #2 (follow-up, день 3) ---
+Subject: Re: missed leads
+
+{{NAME}} — circling back once. If speed-to-lead is already under 2 minutes on your side, ignore me.
+
+If not, here’s the calendar again: {{BOOK_LINK}}
+
+--- LinkedIn DM (коротко) ---
+Hi {{NAME}} — we help {{NICHE}} owners book more jobs by automating follow-up on missed calls/leads. Open to a 15-min chat this week?
+
+--- WhatsApp / SMS ---
+Hi {{NAME}}, this is {{YOUR_NAME}} — you asked about lead follow-up on our site. Do you have 15 min tomorrow for a quick call? {{BOOK_LINK}}
+
+ПРАЙС ДЛЯ РОЗМОВИ
+-----------------
+- Launch: $490 one-time + optional Growth $189/mo (як на сайті).
+- Першому клієнту можна «пілот» −10% за відео-відгук після 30 днів.
+
+МЕТРИКА ДНЯ
+-----------
+- 20–40 першого контакту (email/DM/SMS).
+- 3–5 розмов booked.
+- 1 оплата setup — вже прогрес.
