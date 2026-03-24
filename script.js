@@ -3,10 +3,26 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 const form = document.getElementById("lead-form");
 const formMessage = document.getElementById("form-message");
-const languageSelect = document.getElementById("language-select");
 const endpoint = window.LEADPULSE_ENDPOINT || "";
 const LANGUAGE_KEY = "leadpulse_language";
 let currentLanguage = localStorage.getItem(LANGUAGE_KEY) || "en";
+
+const i18nDefaultsText = {};
+const i18nDefaultsHtml = {};
+document.querySelectorAll("[data-i18n]").forEach((el) => {
+  const key = el.getAttribute("data-i18n");
+  if (key && i18nDefaultsText[key] === undefined) i18nDefaultsText[key] = el.textContent;
+});
+document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+  const key = el.getAttribute("data-i18n-html");
+  if (key && i18nDefaultsHtml[key] === undefined) i18nDefaultsHtml[key] = el.innerHTML;
+});
+document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+  const key = el.getAttribute("data-i18n-placeholder");
+  if (key && i18nDefaultsText[`__ph_${key}`] === undefined) {
+    i18nDefaultsText[`__ph_${key}`] = el.getAttribute("placeholder") || "";
+  }
+});
 
 const translations = {
   en: {},
@@ -168,24 +184,36 @@ function applyLanguage(lang) {
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (currentLanguage === "en" && !translations.en[key]) return;
-    el.textContent = t(key);
+    if (currentLanguage === "en") {
+      el.textContent = i18nDefaultsText[key] ?? el.textContent;
+    } else {
+      el.textContent = t(key);
+    }
   });
 
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.getAttribute("data-i18n-html");
-    if (currentLanguage === "en" && !translations.en[key]) return;
-    el.innerHTML = t(key);
+    if (currentLanguage === "en") {
+      el.innerHTML = i18nDefaultsHtml[key] ?? el.innerHTML;
+    } else {
+      el.innerHTML = t(key);
+    }
   });
 
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");
-    if (currentLanguage === "en" && !translations.en[key]) return;
-    el.setAttribute("placeholder", t(key));
+    if (currentLanguage === "en") {
+      el.setAttribute("placeholder", i18nDefaultsText[`__ph_${key}`] || "");
+    } else {
+      el.setAttribute("placeholder", t(key));
+    }
   });
 
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-  if (languageSelect) languageSelect.value = currentLanguage;
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === currentLanguage);
+  });
 }
 
 function showMessage(message, isError = false) {
@@ -252,8 +280,8 @@ if (form && formMessage) {
   });
 }
 
-if (languageSelect) {
-  languageSelect.addEventListener("change", () => applyLanguage(languageSelect.value));
-}
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+  btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang") || "en"));
+});
 
 applyLanguage(currentLanguage);
