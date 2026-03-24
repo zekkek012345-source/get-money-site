@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zekkek012345-source.github.io/get-money-site/sitemap.xml
