@@ -1,0 +1,1 @@
+Hi {{NAME}} — we help {{NICHE}} owners book more jobs by automating follow-up on missed calls/leads. Open to a 15-min chat this week?
