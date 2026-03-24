@@ -8,18 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=lang-buttons">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <div class="brand">LeadPulse AI</div>
       <div class="nav-controls">
-        <select id="language-select" class="lang-select" aria-label="Language">
-          <option value="en">English</option>
-          <option value="uk">Українська</option>
-          <option value="de">Deutsch</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" title="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="uk" title="Українська">UA</button>
+          <button type="button" class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+        </div>
         <a class="btn btn-outline" href="#contact" data-i18n="nav.cta">Get Free Audit</a>
       </div>
     </div>
@@ -209,7 +209,7 @@
     </div>
   </footer>
 
-  <script src="./config.js"></script>
-  <script src="./script.js"></script>
+  <script src="./config.js?v=lang-buttons"></script>
+  <script src="./script.js?v=lang-buttons"></script>
 </body>
 </html>
