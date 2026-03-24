@@ -27,6 +27,7 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
 const translations = {
   en: {},
   uk: {
+    "lang.bannerLabel": "Мова / Language / Sprache",
     "nav.cta": "Отримати безкоштовний аудит",
     "hero.eyebrow": "Для локального сервісного бізнесу",
     "hero.title": "Перестаньте втрачати дорогі ліди, поки команда зайнята.",
@@ -99,6 +100,7 @@ const translations = {
     "msg.error": "Не вдалося надіслати запит зараз. Ми зберегли його локально та повторимо вручну."
   },
   de: {
+    "lang.bannerLabel": "Sprache / Language / Мова",
     "nav.cta": "Kostenloses Audit erhalten",
     "hero.eyebrow": "Fur lokale Dienstleistungsunternehmen",
     "hero.title": "Verlieren Sie keine hochwertigen Leads mehr, wahrend Ihr Team beschaftigt ist.",
