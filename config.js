@@ -1,6 +1,6 @@
 // Web App URL (Apps Script deploy)
 window.LEADPULSE_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycby-UP-JwAGJLfJGNPTZrkXlIFZ-HpMnpQIcRzgFQ9HtRuN91Astm_6Q6rHMCXZB9dpZ/exec";
+  "https://script.google.com/macros/s/AKfycbzHqa8dmRrBApwoB-RK-_inOJV8_hjLpofkxuterWhcnoclrtcOd4rOZfxc0TX6Fpz7/exec";
 
 // Посилання на бронь 15 хв: https://calendly.com/... або mailto (працює без Calendly).
 window.CALENDLY_URL = "";
