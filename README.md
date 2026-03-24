@@ -39,7 +39,9 @@ Open `index.html` in a browser.
    - Who has access: `Anyone`
 5. Copy the Web App URL.
 
-**Email на кожен лід (опційно):** у Apps Script → Project Settings → Script properties → `ALERT_EMAIL` = ваш email → зберегти → Deploy нову версію Web App.
+**Email на кожен лід:** за замовчуванням використовується `FALLBACK_ALERT_EMAIL` у `google-apps-script.gs` (змініть там, якщо потрібен інший). Опційно перекривається властивістю `ALERT_EMAIL` у Script properties.
+
+**Таблиця:** після відкриття Google Sheet з’явиться меню **LeadPulse** → форматування + тригер дайджесту (див. `OPERATIONS.txt`).
 
 ### 2) Connect Site Form
 
