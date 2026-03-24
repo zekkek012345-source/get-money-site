@@ -241,6 +241,15 @@ input, select {
   margin: 0;
 }
 
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  pointer-events: none;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px 0;
